@@ -55,7 +55,7 @@ public class WindFxClient implements ClientModInitializer {
         ParticleOptions type = cfg.mode == WindFxConfig.ParticleMode.DUST
                 ? ParticleTypes.WHITE_ASH : ParticleTypes.CHERRY_LEAVES;
 
-        RandomSource rand = level.random;
+           RandomSource rand = level.getRandom();
         int r = cfg.radius;
         for (int i = 0; i < count; i++) {
             // spawn upwind so particles blow across the player's view
